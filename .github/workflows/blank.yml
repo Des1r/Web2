@@ -16,6 +16,6 @@ jobs:
       - name: sonar docker web
         run: |
          docker pull kibana
-         docker run -d --name kibana --net somenetwork -p 8080:5601 kibana:latest
+         docker run -d --name kibana --net somenetwork -p 8080:5601 kibana
       - name: run cloudflared tunel
         run: cloudflared tunnel
