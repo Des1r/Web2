@@ -15,7 +15,7 @@ jobs:
           sudo apt-get install -y cloudflared
       - name: sonar docker web
         run: |
-         docker pull kibana
-         docker run -d --name kibana --net somenetwork -p 8080:5601 kibana
+         docker pull kibana:6.8.20
+         docker run -d --name kibana --net somenetwork -p 8080:5601 kibana:6.8.20
       - name: run cloudflared tunel
         run: cloudflared tunnel
